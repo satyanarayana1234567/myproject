@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn Languages Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../Js/home.js" defer></script>
+  <link rel="stylesheet" href="../CSS/home.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white font-sans">
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 border-r transform -translate-x-full transition-transform duration-300">
+    <div class="p-5 border-b font-bold text-xl text-blue-700 flex justify-between items-center">
+      📚 Menu
+      <button onclick="toggleSidebar()" class="text-blue-600 hover:text-blue-800">&times;</button>
+    </div>
+    <ul class="p-5 space-y-4 text-gray-700">
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/home.png" alt="Home Icon" class="w-5 h-5">
+        <a href="Home.html" class="hover:text-blue-600 transition">Home</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/courses.png" alt="Courses Icon" class="w-5 h-5">
+        <a href="courses.html" class="hover:text-blue-600 transition">Courses</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/enrolled.png" alt="Enrolled Icon" class="w-5 h-5">
+        <a href="../php/wishlist.php" class="hover:text-blue-600 transition">Enrolled Courses</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/feedback.png" alt="Feedback Icon" class="w-5 h-5">
+        <a href="feedback.html" class="hover:text-blue-600 transition">Feedbacks</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/writeus.png" alt="About Us Icon" class="w-5 h-5">
+        <a href="aboutus.html" class="hover:text-blue-600 transition">About us</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-30">
+    <div class="flex items-center gap-3">
+      <img src="../UiMedia/menuWhite2.png" class="w-6 h-6 cursor-pointer" onclick="toggleSidebar()" />
+      <h1 class="text-2xl font-bold">Learn Languages Online</h1>
+    </div>
+    <div class="hidden md:flex gap-2">
+      <a href="Home.html"><img src="../UiMedia/whiteHome.png" alt="Home Icon" class="w-8 h-8 mt-[4px] "></a>
+      <a href="../php/dashboard.php"><img src="../UiMedia/whiteProfile.png" alt="Profile Icon" class="w-8 h-8 mt-[4px] "></a>
+    </div>
+  </header>
+
+  <!-- Main Courses Section -->
+  <main class="p-6">
+    <h2 class="text-2xl font-semibold mb-4 text-center">Courses</h2>
+    <p class="text-center mb-6">Browse all available language courses.</p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+      <!-- Spanish -->
+      <div class="course-card bg-white p-4 shadow rounded-lg h-80 flex flex-col justify-between">
+        <img src="../UiMedia/spanishCover.png" alt="Spanish" class="w-full h-32 object-cover rounded mb-2">
+        <div>
+          <h3 class="font-bold text-lg">Spanish for Beginners</h3>
+          <p>A foundational course for new Spanish learners.</p>
+        </div>
+        <a href="../php/playlist.php?course=spanish" class="bg-blue-600 text-white px-4 py-1 mt-2 rounded-2xl hover:bg-blue-700 text-center block">View Course</a>
+        <form action="../php/add_to_wishlist.php" method="POST" class="mt-2">
+          <input type="hidden" name="course" value="spanish">
+          <button type="submit" class="bg-green-500 text-white px-4 py-1 rounded-2xl hover:bg-green-600 w-full text-center">+ Add to My List</button>
+        </form>
+      </div>
+
+      <!-- French -->
+      <div class="course-card bg-white p-4 shadow rounded-lg h-80 flex flex-col justify-between">
+        <img src="../UiMedia/frenchCover.png" alt="French" class="w-full h-32 object-cover rounded mb-2">
+        <div>
+          <h3 class="font-bold text-lg">French Conversation</h3>
+          <p>Improve your fluency and pronunciation with native speakers.</p>
+        </div>
+        <a href="../php/playlist.php?course=french-beginner" class="bg-blue-600 text-white px-4 py-1 mt-2 rounded-2xl hover:bg-blue-700 text-center block">View Course</a>
+        <form action="../php/add_to_wishlist.php" method="POST" class="mt-2">
+          <input type="hidden" name="course" value="french-beginner">
+          <button type="submit" class="bg-green-500 text-white px-4 py-1 rounded-2xl hover:bg-green-600 w-full text-center">+ Add to My List</button>
+        </form>
+      </div>
+
+      <!-- English -->
+      <div class="course-card bg-white p-4 shadow rounded-lg h-80 flex flex-col justify-between">
+        <img src="../UiMedia/englishCover.png" alt="Business English" class="w-full h-32 object-cover rounded mb-2">
+        <div>
+          <h3 class="font-bold text-lg">Business English</h3>
+          <p>Enhance your English skills for professional contexts.</p>
+        </div>
+        <a href="../php/playlist.php?course=english" class="bg-blue-600 text-white px-4 py-1 mt-2 rounded-2xl hover:bg-blue-700 text-center block">View Course</a>
+        <form action="../php/add_to_wishlist.php" method="POST" class="mt-2">
+          <input type="hidden" name="course" value="english">
+          <button type="submit" class="bg-green-500 text-white px-4 py-1 rounded-2xl hover:bg-green-600 w-full text-center">+ Add to My List</button>
+        </form>
+      </div>
+
+      <!-- German -->
+      <div class="course-card bg-white p-4 shadow rounded-lg h-80 flex flex-col justify-between">
+        <img src="../UiMedia/germanCover.png" alt="German" class="w-full h-32 object-cover rounded mb-2">
+        <div>
+          <h3 class="font-bold text-lg">German Grammar</h3>
+          <p>Master essential German grammar rules.</p>
+        </div>
+        <a href="../php/playlist.php?course=german-a1" class="bg-blue-600 text-white px-4 py-1 mt-2 rounded-2xl hover:bg-blue-700 text-center block">View Course</a>
+        <form action="../php/add_to_wishlist.php" method="POST" class="mt-2">
+          <input type="hidden" name="course" value="german-a1">
+          <button type="submit" class="bg-green-500 text-white px-4 py-1 rounded-2xl hover:bg-green-600 w-full text-center">+ Add to My List</button>
+        </form>
+      </div>
+
+      <!-- Mandarin -->
+      <div class="course-card bg-white p-4 shadow rounded-lg h-80 flex flex-col justify-between">
+        <img src="../UiMedia/mandarinCover.png" alt="Mandarin" class="w-full h-32 object-cover rounded mb-2">
+        <div>
+          <h3 class="font-bold text-lg">Mandarin Basics</h3>
+          <p>Learn basic phrases and pronunciation in Mandarin.</p>
+        </div>
+        <a href="../php/playlist.php?course=mandarin" class="bg-blue-600 text-white px-4 py-1 mt-2 rounded-2xl hover:bg-blue-700 text-center block">View Course</a>
+        <form action="../php/add_to_wishlist.php" method="POST" class="mt-2">
+          <input type="hidden" name="course" value="mandarin">
+          <button type="submit" class="bg-green-500 text-white px-4 py-1 rounded-2xl hover:bg-green-600 w-full text-center">+ Add to My List</button>
+        </form>
+      </div>
+
+      <!-- Italian -->
+      <div class="course-card bg-white p-4 shadow rounded-lg h-80 flex flex-col justify-between">
+        <img src="../UiMedia/italy.jpeg" alt="Italian" class="w-full h-32 object-cover rounded mb-2">
+        <div>
+          <h3 class="font-bold text-lg">Italian Culture & Language</h3>
+          <p>Explore Italian through culture and language immersion.</p>
+        </div>
+        <a href="../php/playlist.php?course=italian" class="bg-blue-600 text-white px-4 py-1 mt-2 rounded-2xl hover:bg-blue-700 text-center block">View Course</a>
+        <form action="../php/add_to_wishlist.php" method="POST" class="mt-2">
+          <input type="hidden" name="course" value="italian">
+          <button type="submit" class="bg-green-500 text-white px-4 py-1 rounded-2xl hover:bg-green-600 w-full text-center">+ Add to My List</button>
+        </form>
+      </div>
+
+      <!-- Japanese -->
+      <div class="course-card bg-white p-4 shadow rounded-lg h-80 flex flex-col justify-between">
+        <img src="../UiMedia/japanCover.png" alt="Japanese" class="w-full h-32 object-cover rounded mb-2">
+        <div>
+          <h3 class="font-bold text-lg">Japanese Writing</h3>
+          <p>Practice reading and writing Hiragana, Katakana, and Kanji.</p>
+        </div>
+        <a href="../php/playlist.php?course=japanese" class="bg-blue-600 text-white px-4 py-1 mt-2 rounded-2xl hover:bg-blue-700 text-center block">View Course</a>
+        <form action="../php/add_to_wishlist.php" method="POST" class="mt-2">
+          <input type="hidden" name="course" value="japanese">
+          <button type="submit" class="bg-green-500 text-white px-4 py-1 rounded-2xl hover:bg-green-600 w-full text-center">+ Add to My List</button>
+        </form>
+      </div>
+
+      <!-- Arabic -->
+      <div class="course-card bg-white p-4 shadow rounded-lg h-80 flex flex-col justify-between">
+        <img src="../UiMedia/arabCover.jpg" alt="Arabic" class="w-full h-32 object-cover rounded mb-2">
+        <div>
+          <h3 class="font-bold text-lg">Arabic for Travel</h3>
+          <p>Essential Arabic phrases for travelers and tourists.</p>
+        </div>
+        <a href="../php/playlist.php?course=arabic" class="bg-blue-600 text-white px-4 py-1 mt-2 rounded-2xl hover:bg-blue-700 text-center block">View Course</a>
+        <form action="../php/add_to_wishlist.php" method="POST" class="mt-2">
+          <input type="hidden" name="course" value="arabic">
+          <button type="submit" class="bg-green-500 text-white px-4 py-1 rounded-2xl hover:bg-green-600 w-full text-center">+ Add to My List</button>
+        </form>
+      </div>
+
+    </div>
+  </main>
+
+  <script>
+    let isSidebarOpen = false;
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      isSidebarOpen = !isSidebarOpen;
+      sidebar.style.transform = isSidebarOpen ? 'translateX(0)' : 'translateX(-100%)';
+    }
+
+    document.addEventListener('click', function(event) {
+      const sidebar = document.getElementById('sidebar');
+      const menuButton = document.querySelector('img[onclick="toggleSidebar()"]');
+      if (isSidebarOpen && !sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+        toggleSidebar();
+      }
+    });
+
+    document.getElementById('sidebar').addEventListener('mouseleave', function() {
+      if (isSidebarOpen) {
+        toggleSidebar();
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-5 mt-16">
+    © 2025 LearnLanguagesOnline.com | All rights reserved.
+  </footer>
+
+</body>
+</html>

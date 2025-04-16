@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learn Languages Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../Js/home.js" defer></script>
+  <link rel="stylesheet" href="../CSS/home.css">
+</head>
+
+<body class="bg-gradient-to-br from-blue-50 to-white font-sans">
+
+  <!-- Sidebar -->
+  <div id="sidebar"
+    class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 border-r transform -translate-x-full transition-transform duration-300">
+    <div class="p-5 border-b font-bold text-xl text-blue-700 flex justify-between items-center">
+      📚 Menu
+      <button onclick="toggleSidebar()" class="text-blue-600 hover:text-blue-800">
+        &times; <!-- Close icon -->
+      </button>
+    </div>
+    <ul class="p-5 space-y-4 text-gray-700">
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/courses.png" alt="Courses Icon" class="w-5 h-5">
+        <a href="courses.html" class="hover:text-blue-600 transition">Courses</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/enrolled.png" alt="Enrolled Icon" class="w-5 h-5">
+        <a href="../php/wishlist.php" class="hover:text-blue-600 transition">Enrolled Courses</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/feedback.png" alt="Feedback Icon" class="w-5 h-5">
+        <a href="feedback.html" class="hover:text-blue-600 transition">Feedbacks</a>
+      </li>
+      <li class="flex items-center gap-2">
+        <img src="../UiMedia/writeus.png" alt="About Us Icon" class="w-5 h-5">
+        <a href="aboutus.html" class="hover:text-blue-600 transition">About us</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-30">
+    <div class="flex items-center gap-3">
+      <img src="../UiMedia/menuWhite2.png" class="w-6 h-6 cursor-pointer" onclick="toggleSidebar()" title="Menu"/>
+      <h1 class="text-2xl font-bold">Learn Languages Online</h1>
+    </div>
+    <div class="hidden md:flex gap-2"> <!-- Hide on small screens -->
+      <a href="Home.html"><img src="../UiMedia/whiteHome.png" alt="Home Icon" class="w-8 h-8 mt-[4px] " title="Home"></a>
+      <a href="../php/dashboard.php"><img src="../UiMedia/whiteProfile.png" alt="Profile Icon" class="w-8 h-8 mt-[4px] " title="Login"></a>
+      <a href="landingPage.html"><img src="../UiMedia/logout.png" alt="logout Icon" class="w-8 h-8 mt-[4px] " title="Logout"></a>
+    </div>
+    <div class="md:hidden flex gap-2"> <!-- Show on small screens -->
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <!-- Main Content -->
+  <main class="p-6 max-w-7xl mx-auto">
+    
+  
+    <!-- Card-Style Slideshow Section -->
+<!-- Card-Style Slideshow Section -->
+<div class="container mx-auto px-4 py-8 max-w-md">
+  <div class="relative overflow-hidden rounded-xl shadow-lg">
+    <div class="flex transition-transform duration-700 ease-in-out" id="card-carousel">
+      <!-- Slide 1 -->
+      <div class="min-w-full flex-shrink-0 p-2">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <img src="../UiMedia/spanishCover.png" class="w-full h-40 object-cover" alt="Spanish Course" />
+          <div class="p-3">
+            <h3 class="text-lg font-bold">Spanish Course</h3>
+            <p class="text-sm">Learn the beautiful language of Spain and Latin America</p><br>
+            <div class="flex justify-center">
+              <a href="courses.html" class="bg-blue-600 text-white rounded px-4 py-2">Explore now !</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="min-w-full flex-shrink-0 p-2">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <img src="../UiMedia/englishCover.png" class="w-full h-40 object-cover" alt="English Course" />
+          <div class="p-3">
+            <h3 class="text-lg font-bold">English Course</h3>
+            <p class="text-sm">Master the global language of business and communication</p><br>
+            <div class="flex justify-center">
+              <a href="courses.html" class="bg-blue-600 text-white rounded px-4 py-2">Join now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="min-w-full flex-shrink-0 p-2">
+        <div class="bg-white rounded-lg overflow-hidden shadow-md">
+          <img src="../UiMedia/frenchCover.png" class="w-full h-40 object-cover" alt="French Course" />
+          <div class="p-3">
+            <h3 class="text-lg font-bold">French Course</h3>
+            <p class="text-sm">Discover the language of love and culture</p><br>
+            <div class="flex justify-center">
+              <a href="courses.html" class="bg-blue-600 text-white rounded px-4 py-2">Join now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button id="prev-slide" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white rounded-full w-8 h-8 text-sm flex items-center justify-center hover:bg-blue-700 z-10">&#8592;</button>
+    <button id="next-slide" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white rounded-full w-8 h-8 text-sm flex items-center justify-center hover:bg-blue-700 z-10">&#8594;</button>
+  </div>
+</div>
+
+    
+
+
+      
+   
+
+    <!-- Floating Quick Jump -->
+    <div id="quick-jump"
+      class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg z-50 transition-opacity duration-500">
+      <a href="courses.html" class="mx-2 hover:underline">All COURSES</a> |
+      <a href="../php/wishlist.php" class="mx-2 hover:underline">My Courses</a> |
+      <a href="#word-quiz" class="mx-2 hover:underline">WORD COACH</a>
+    </div>
+
+
+    <!-- Languages Offered -->
+    <section class="bg-blue-100 p-8 rounded-3xl shadow mb-16">
+      <h2 class="text-3xl font-semibold text-center text-blue-700 mb-6">Languages Offered</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-gray-700">
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">🇬🇧 English</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">🇪🇸 Spanish</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">🇫🇷 French</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">🇯🇵 Japanese</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">🇩🇪 German</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">🇨🇳 Chinese</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">🇰🇷 Korean</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-md transition">🇸🇦 Arabic</li>
+      </ul>
+    </section>
+
+    <!-- word  coach -->
+    <section id="word-quiz" class="bg-white p-6 rounded-2xl shadow-lg max-w-xl mx-auto mt-10">
+      <h2 class="text-xl font-bold text-gray-800 mb-4">🧠 Word Coach</h2>
+
+      <div id="quiz-box" class="text-center">
+        <p id="quiz-question" class="text-lg mb-6 text-gray-700 font-medium">
+          Which word is <em>similar</em> to <span class="font-bold" id="word"></span>?
+        </p>
+
+        <div class="space-y-4">
+          <button onclick="checkAnswer(this)"
+            class="block w-full bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 font-semibold transition"
+            id="option1"></button>
+          <p class="text-sm text-gray-400">or</p>
+          <button onclick="checkAnswer(this)"
+            class="block w-full bg-blue-100 text-blue-700 px-4 py-2 rounded-lg hover:bg-blue-200 font-semibold transition"
+            id="option2"></button>
+        </div>
+
+        <p id="feedback" class="mt-6 text-lg font-medium"></p>
+        <button id="next-btn" onclick="nextQuestion()"
+          class="mt-4 hidden bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Next</button>
+      </div>
+    </section><br><br>
+
+
+    <!-- REVIEWS -->
+     <!-- Student Reviews Section -->
+  <section class="py-12 px-4 bg-gray-50">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl font-semibold text-gray-800">Hear from our Family !</h2>
+      <hr class="w-16 border-2 border-purple-500 mx-auto mt-2" />
+    </div>
+
+    <div id="reviewSection" class="flex flex-wrap justify-center gap-6">
+      <!-- Review Cards -->
+      <div class="bg-white rounded-xl shadow-md p-6 w-[300px] min-h-[220px] flex flex-col justify-between transition-transform hover:-translate-y-1 hover:shadow-lg">
+        <p class="text-sm text-gray-700 mb-4">"The course helped me improve my speaking skills. The instructors are amazing and the material is very easy to follow!"</p>
+        <div class="flex items-center gap-4">
+          <img src="https://i.ibb.co/yW4Fmgj/avatar1.png" class="w-12 h-12 rounded-full" />
+          <div>
+            <h4 class="font-semibold text-gray-800 text-sm">Nilanshu</h4>
+            <div class="text-yellow-400 text-sm">⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 w-[300px] min-h-[220px] flex flex-col justify-between transition-transform hover:-translate-y-1 hover:shadow-lg">
+        <p class="text-sm text-gray-700 mb-4">"I loved the interactive sessions and exercises. I can now confidently hold a conversation in Spanish."</p>
+        <div class="flex items-center gap-4">
+          <img src="https://i.ibb.co/h9vG12T/avatar2.png" class="w-12 h-12 rounded-full" />
+          <div>
+            <h4 class="font-semibold text-gray-800 text-sm">Suraj Pandey</h4>
+            <div class="text-yellow-400 text-sm">⭐⭐⭐⭐½</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow-md p-6 w-[300px] min-h-[220px] flex flex-col justify-between transition-transform hover:-translate-y-1 hover:shadow-lg">
+        <p class="text-sm text-gray-700 mb-4">"Flexible timing and practical lessons make this perfect for working professionals. Highly recommended!"</p>
+        <div class="flex items-center gap-4">
+          <img src="https://i.ibb.co/3skYZ6p/avatar3.png" class="w-12 h-12 rounded-full" />
+          <div>
+            <h4 class="font-semibold text-gray-800 text-sm">Raj</h4>
+            <div class="text-yellow-400 text-sm">⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <script>
+    let isSidebarOpen = false; // Track the sidebar state
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      isSidebarOpen = !isSidebarOpen; // Toggle the state
+      sidebar.style.transform = isSidebarOpen ? 'translateX(0)' : 'translateX(-100%)';
+    }
+
+    // Close sidebar when clicking outside of it
+    document.addEventListener('click', function (event) {
+      const sidebar = document.getElementById('sidebar');
+      const menuButton = document.querySelector('img[onclick="toggleSidebar()"]');
+
+      // Check if the click was outside the sidebar and the menu button
+      if (isSidebarOpen && !sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+        toggleSidebar(); // Close the sidebar
+      }
+    });
+
+    // Close sidebar on mouse leave
+    document.getElementById('sidebar').addEventListener('mouseleave', function () {
+      if (isSidebarOpen) {
+        toggleSidebar(); // Close the sidebar
+      }
+    });
+  </script>
+
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-5 mt-16">
+    <div class="container mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-4">
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-lg font-bold">Connect with Us</h2>
+          <div class="flex justify-center space-x-4 mt-2">
+            <a href="https://www.facebook.com" target="_blank" class="hover:text-blue-400">
+              <img src="/UiMedia/fb.png" alt="Facebook" class="w-6 h-6">
+            </a>
+            <a href="https://www.twitter.com" target="_blank" class="hover:text-blue-400">
+              <img src="/UiMedia/twitter.png" alt="Twitter" class="w-6 h-6">
+            </a>
+            <a href="https://www.instagram.com" target="_blank" class="hover:text-blue-400">
+              <img src="/UiMedia/instagram.png" alt="Instagram" class="w-6 h-6">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="hover:text-blue-400">
+              <img src="/UiMedia/linkedin.png" alt="LinkedIn" class="w-6 h-6">
+            </a>
+          </div>
+        </div>
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-lg font-bold">Quick Links</h2>
+          <ul class="space-y-1 mt-2">
+            <li><a href="#" class="hover:text-blue-400">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-blue-400">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="text-lg font-bold">Contact Us</h2>
+          <p class="mt-2">Email: <a href="mailto:info@learnlanguagesonline.com" class="hover:text-blue-400">info@learnlanguagesonline.com</a></p>
+          <p>Phone: <a href="tel:+1234567890" class="hover:text-blue-400">+1 (234) 567-890</a></p>
+        </div>
+      </div>
+      <div class="border-t border-blue-500 pt-4">
+        <p class="text-sm">&copy; 2025 LearnLanguagesOnline.com | All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+ 
+  </script>
+</body>
+</html>
+

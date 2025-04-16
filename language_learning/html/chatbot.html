@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Learn Languages Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="../Js/home.js" defer></script>
+  <link rel="stylesheet" href="../CSS/home.css">
+  <link rel="stylesheet" href="../CSS/chatbot.css">
+  <script src="../js/chatbot.js" defer></script>
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-white font-sans">
+
+      <!-- Sidebar -->
+      <div id="sidebar" class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg z-40 border-r transform -translate-x-full transition-transform duration-300">
+        <div class="p-5 border-b font-bold text-xl text-blue-700 flex justify-between items-center">
+          📚 Menu
+          <button onclick="toggleSidebar()" class="text-blue-600 hover:text-blue-800">
+            &times; <!-- Close icon -->
+          </button>
+        </div>
+        <ul class="p-5 space-y-4 text-gray-700">
+        <li class="flex items-center gap-2">
+            <img src="../UiMedia/home.png" alt="Courses Icon" class="w-5 h-5">
+            <a href="Home.html" class="hover:text-blue-600 transition">Home</a>
+            </li>
+          <li class="flex items-center gap-2">
+            <img src="../UiMedia/courses.png" alt="Courses Icon" class="w-5 h-5">
+            <a href="courses.html" class="hover:text-blue-600 transition">Courses</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="../UiMedia/enrolled.png" alt="Enrolled Icon" class="w-5 h-5">
+            <a href="../php/wishlist.php" class="hover:text-blue-600 transition">Enrolled Courses</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="../UiMedia/feedback.png" alt="Feedback Icon" class="w-5 h-5">
+            <a href="feedback.html" class="hover:text-blue-600 transition">Feedbacks</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <img src="../UiMedia/writeus.png" alt="About Us Icon" class="w-5 h-5">
+            <a href="aboutus.html" class="hover:text-blue-600 transition">About us</a>
+          </li>
+        </ul>
+      </div>
+    
+      <!-- Header -->
+      <header class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-30">
+        <div class="flex items-center gap-3">
+          <img src="../UiMedia/menuWhite2.png"
+               class="w-6 h-6 cursor-pointer"
+               onclick="toggleSidebar()" />
+          <h1 class="text-2xl font-bold">Learn Languages Online</h1>
+        </div>
+        <div class="hidden md:flex gap-2"> <!-- Hide on small screens -->
+          <a href="Home.html"><img src="../UiMedia/whiteHome.png" alt="Home Icon" class="w-8 h-8 mt-[4px] "></a>
+          <a href="../php/dashboard.php"><img src="../UiMedia/whiteProfile.png" alt="Profile Icon" class="w-8 h-8 mt-[4px] "></a>
+          
+        </div>
+        <div class="md:hidden flex gap-2"> <!-- Show on small screens -->
+        
+        </div>
+      </header>
+
+      <!-- Updated Chatbot Section with Gemini Chatbot -->
+      <div class="chatbot-container">
+        <h2 class="chatbot-header">Chatbot</h2>
+        <div class="chat-messages" id="chat-messages"></div>
+        <div class="chat-input-container">
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button class="chatbot-btn" id="send-button">Send</button>
+        </div>
+    </div>
+</div>
+
+  <script>
+    let isSidebarOpen = false; // Track the sidebar state
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      isSidebarOpen = !isSidebarOpen; // Toggle the state
+      sidebar.style.transform = isSidebarOpen ? 'translateX(0)' : 'translateX(-100%)';
+    }
+
+    // Close sidebar when clicking outside of it
+    document.addEventListener('click', function(event) {
+      const sidebar = document.getElementById('sidebar');
+      const menuButton = document.querySelector('img[onclick="toggleSidebar()"]');
+
+      // Check if the click was outside the sidebar and the menu button
+      if (isSidebarOpen && !sidebar.contains(event.target) && !menuButton.contains(event.target)) {
+        toggleSidebar(); // Close the sidebar
+      }
+    });
+
+    // Close sidebar on mouse leave
+    document.getElementById('sidebar').addEventListener('mouseleave', function() {
+      if (isSidebarOpen) {
+        toggleSidebar(); // Close the sidebar
+      }
+    });
+</script>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-5 mt-16">
+    © 2025 LearnLanguagesOnline.com | All rights reserved.
+  </footer>
+</body>
+</html>

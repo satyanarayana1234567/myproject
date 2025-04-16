@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Learn Languages Online</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white px-6 py-4 flex justify-between items-center shadow-md sticky top-0 z-30">
+    <div class="flex items-center gap-3">
+      <h1 class="text-2xl font-bold">Learn Languages Online</h1>
+    </div>
+    <div class="hidden md:flex gap-2">
+        <!--⚠️ below two links update  -->
+      <a href="landingPage.html"><img src="../UiMedia/whiteHome.png" alt="Home Icon" class="w-8 h-8 mt-[4px]"></a>
+      <button class="bg-white text-blue-600 px-5 py-2 rounded-full font-semibold hover:bg-gray-100 transition" onclick="window.location.href='signup.html'">Signup</button>
+    </div>
+    <div class="md:hidden flex gap-2">
+      <button class="bg-white text-blue-600 px-5 py-2 rounded-full font-semibold hover:bg-gray-100 transition" onclick="window.location.href='signup.html'">Signup</button>
+    </div>
+  </header>
+
+  <!-- 🔹 Login Section -->
+  <main class="flex flex-col md:flex-row min-h-screen items-center">
+    <!-- Image Left -->
+    <div class="w-full md:w-1/2 flex justify-center items-center">
+      <img src="../UiMedia/loginimageside.jpg" alt="Login Illustration" class="w-full h-auto object-contain p-10" />
+    </div>
+
+    <!-- Form Right -->
+    <div class="w-full md:w-1/2 flex items-center justify-center px-6 py-12 md:py-0 bg-white">
+      <div class="bg-white bg-opacity-95 p-6 md:p-12 rounded-xl w-full max-w-md shadow-2xl">
+        <h2 class="text-2xl font-semibold text-center text-gray-800 mb-6">Log In</h2>
+
+        <form action="../php/login.php" method="POST">
+            <input type="text" name="identifier" placeholder="Email/Mobile Number" required 
+            class="w-full p-2.5 mb-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <input type="password" name="password" placeholder="password" required 
+            class="w-full p-2.5 mb-3 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <div class="text-right mb-5">
+            <a href="#" class="text-sm text-blue-600 hover:underline">Forgot Password?</a>
+          </div>
+          <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition duration-200 text-lg">Login</button>
+        </form>
+
+     
+        <div class="text-center text-sm text-gray-600">
+          Don't have an account?
+          <a href="signup.html" class="text-blue-600 hover:underline">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-5 mt-16">
+    © 2025 LearnLanguagesOnline.com | All rights reserved.
+  </footer>
+
+</body>
+</html>
